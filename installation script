@@ -18,7 +18,7 @@ chmod 777 env-var-set.sh
 cd ..
 mkdir project
 cd project
-git clone url
+git clone https://github.com/atuldhudat/game-of-life.git
 cd game-of-life
 mvn install
 
