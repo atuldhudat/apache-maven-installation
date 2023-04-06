@@ -21,3 +21,16 @@ cd project
 git clone url
 cd game-of-life
 mvn install
+
+cd ../../
+mkdir server
+cd server
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-9.0.73.zip
+unzip apache*tomcat*.zip
+chmod 777 apache-tomcat-9.0.73
+cd apache-tomcat-9.0.73/
+cd webapps
+cp /mnt/project/game-of-life/target/game-of-life.war .
+cd ..
+cd /bin
+./startup.sh
